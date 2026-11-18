@@ -167,6 +167,12 @@ body {
     font-size: 11px;
 }
 
+.hero__supporting-text {
+    margin: 8px 0 0;
+    font-size: 16px;
+    line-height: 24px;
+}
+
 .hero__buttons {
     display: flex;
     justify-content: center;
