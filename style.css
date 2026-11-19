@@ -267,6 +267,202 @@ body {
     background-color: #ffffff;
 }
 
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1530px;
+    margin: 0 auto;
+    padding: 32px 24px 48px;
+    background-color: #f0f0f0;
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    padding: 26px 24px 18px;
+    overflow: hidden;
+    border-radius: 18px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.12);
+    transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.feature-card:hover {
+    z-index: 1;
+    transform: scale(1.03);
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.16);
+}
+
+.feature-card h2 {
+    margin: 0 0 6px;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #555555;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+.feature-card sup {
+    margin-left: 2px;
+    font-size: 10px;
+}
+
+.feature-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    margin-top: auto;
+    object-fit: contain;
+}
+
+.compare-section {
+    background-color: #ffffff;
+}
+
+.compare-section__bar {
+    height: 24px;
+    background-color: #f0f0f0;
+}
+
+.compare-section__main {
+    display: grid;
+    grid-template-columns: 360px minmax(0, 1fr);
+    gap: 150px;
+    align-items: start;
+    width: min(1260px, calc(100% - 48px));
+    min-height: 700px;
+    margin: 0 auto;
+}
+
+.compare-section__copy {
+    padding-top: 190px;
+}
+
+.compare-section__copy h2 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.08;
+}
+
+.compare-section__copy p {
+    margin: 18px 0 24px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.compare-section__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 20px;
+    border: 1px solid #161616;
+    border-radius: 22px;
+    color: #161616;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.compare-section__button:hover {
+    color: #ffffff;
+    background-color: #161616;
+}
+
+.compare-section__image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.compare-section__notes {
+    width: min(1120px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 0 0 80px 18px;
+    color: #444444;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.compare-section__notes a {
+    color: inherit;
+}
+
+.newsletter {
+    min-height: 540px;
+    padding: 100px 24px 80px;
+    color: #ffffff;
+    background-color: #161616;
+    text-align: center;
+}
+
+.newsletter__icon {
+    display: block;
+    width: 44px;
+    height: 34px;
+    margin: 0 auto;
+    fill: currentColor;
+}
+
+.newsletter__icon-flap {
+    fill: none;
+    stroke: #161616;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
+}
+
+.newsletter h2 {
+    margin: 28px 0 0;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+}
+
+.newsletter p {
+    margin: 80px 0 40px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.newsletter__label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+.newsletter__email {
+    width: min(400px, 100%);
+    height: 72px;
+    padding: 0 28px;
+    border: 2px solid #ffffff;
+    border-radius: 24px;
+    color: #ffffff;
+    background: transparent;
+    font: inherit;
+    font-size: 16px;
+}
+
+.newsletter__email::placeholder {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.newsletter__email:focus-visible {
+    outline: 2px solid #9ec7ff;
+    outline-offset: 3px;
+}
+
 .product-card__copy {
     position: absolute;
     z-index: 1;
@@ -547,6 +743,38 @@ body {
     .mahomes-picks h2 {
         margin-bottom: 34px;
     }
+
+    .feature-cards {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .compare-section__main {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        min-height: 0;
+        padding: 48px 0;
+    }
+
+    .compare-section__copy {
+        padding-top: 0;
+    }
+
+    .compare-section__image {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .compare-section__notes {
+        padding-bottom: 48px;
+    }
+
+    .newsletter {
+        padding: 72px 20px 56px;
+    }
+
+    .newsletter p {
+        margin: 48px 0 32px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -586,5 +814,31 @@ body {
     .mahomes-scroll__content {
         top: 0;
         height: 100vh;
+    }
+
+    .feature-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+        padding: 24px 16px 36px;
+    }
+
+    .feature-card {
+        height: 380px;
+        padding: 22px 18px 16px;
+    }
+
+    .feature-card h2 {
+        font-size: 20px;
+    }
+
+    .feature-card img {
+        height: 220px;
+    }
+}
+
+@media (max-width: 420px) {
+    .feature-cards {
+        grid-template-columns: 1fr;
+        max-width: 360px;
     }
 }
