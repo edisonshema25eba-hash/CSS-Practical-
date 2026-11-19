@@ -248,6 +248,25 @@ body {
     background-color: #f7f7f7;
 }
 
+.mahomes-picks {
+    padding: 68px 24px 120px;
+    background-color: #f0f0f0;
+}
+
+.mahomes-picks h2 {
+    margin: 0 0 58px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+.mahomes-picks .product-card {
+    height: 480px;
+    background-color: #ffffff;
+}
+
 .product-card__copy {
     position: absolute;
     z-index: 1;
@@ -288,7 +307,7 @@ body {
     transform: translateX(-50%);
 }
 
-.product-card__image--cloud {
+.product-card__image--headphones {
     bottom: 92px;
     width: 270px;
     height: 270px;
@@ -333,6 +352,10 @@ body {
 
 .swatch--yellow {
     background-color: #e1f18a;
+}
+
+.swatch--volt {
+    background-color: #d7f45c;
 }
 
 .swatch--navy {
@@ -456,6 +479,46 @@ body {
     background-color: #161616;
 }
 
+.mahomes-scroll {
+    position: relative;
+    height: 160vh;
+    overflow: clip;
+    color: #ffffff;
+    background-color: #111820;
+}
+
+.mahomes-scroll__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.mahomes-scroll__content {
+    position: sticky;
+    top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 80px);
+    min-height: 520px;
+    padding: 24px;
+    text-align: center;
+}
+
+.mahomes-scroll__content h2 {
+    margin: 8px 0 4px;
+    font-size: clamp(64px, 5.55vw, 80px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -1px;
+}
+
 @media (max-width: 900px) {
     .favorites {
         padding-right: 16px;
@@ -468,6 +531,20 @@ body {
     }
 
     .favorites h2 {
+        margin-bottom: 34px;
+    }
+
+    .mahomes-picks {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .mahomes-picks .favorites__grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .mahomes-picks h2 {
         margin-bottom: 34px;
     }
 }
@@ -500,5 +577,14 @@ body {
     .apple-holiday h2 {
         margin-bottom: 36px;
         font-size: 24px;
+    }
+
+    .mahomes-scroll {
+        height: 150vh;
+    }
+
+    .mahomes-scroll__content {
+        top: 0;
+        height: 100vh;
     }
 }
