@@ -338,6 +338,51 @@ body {
     background-color: #1d2f5a;
 }
 
+.gift-promo {
+    display: flex;
+    align-items: flex-end;
+    min-height: 588px;
+    padding: 48px 4%;
+    background-color: #c6d9ef;
+    background-image: url("Assets/imgi_7_hp-holiday2026-promo.jpg.large.2x.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.gift-promo__content h2 {
+    margin: 0;
+    font-size: 52px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -1px;
+}
+
+.gift-promo__content p {
+    margin: 4px 0 20px;
+    font-size: 24px;
+    line-height: 1.25;
+}
+
+.gift-promo__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 40px;
+    padding: 0 24px;
+    border-radius: 24px;
+    color: #ffffff;
+    background-color: #161616;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.gift-promo__button:hover {
+    background-color: #333333;
+}
+
 @media (max-width: 900px) {
     .favorites {
         padding-right: 16px;
@@ -351,5 +396,22 @@ body {
 
     .favorites h2 {
         margin-bottom: 34px;
+    }
+}
+
+@media (max-width: 600px) {
+    .gift-promo {
+        min-height: 520px;
+        padding: 32px 20px;
+        background-attachment: scroll;
+        background-position: 55% center;
+    }
+
+    .gift-promo__content h2 {
+        font-size: 36px;
+    }
+
+    .gift-promo__content p {
+        font-size: 18px;
     }
 }
