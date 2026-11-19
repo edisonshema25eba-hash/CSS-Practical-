@@ -214,3 +214,142 @@ body {
     stroke-linejoin: round;
     stroke-width: 1.7;
 }
+
+.favorites {
+    min-height: 620px;
+    padding: 68px 24px 24px;
+    background-color: #ffffff;
+}
+
+.favorites h2 {
+    margin: 0 0 58px;
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+.favorites__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 17px;
+    width: min(1116px, 100%);
+    margin: 0 auto;
+}
+
+.product-card {
+    position: relative;
+    height: 520px;
+    overflow: hidden;
+    border: 1px solid #e2e2e2;
+    border-radius: 18px;
+    background-color: #f7f7f7;
+}
+
+.product-card__copy {
+    position: absolute;
+    z-index: 1;
+    top: 27px;
+    left: 28px;
+    right: 20px;
+}
+
+.product-card__new {
+    margin: 0 0 5px;
+    color: #e01e3c;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+}
+
+.product-card h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 31px;
+    letter-spacing: -1px;
+}
+
+.product-card__price {
+    margin: 8px 0 0;
+    font-size: 19px;
+    line-height: 23px;
+}
+
+.product-card__image {
+    position: absolute;
+    left: 50%;
+    bottom: 75px;
+    width: 260px;
+    height: 260px;
+    object-fit: contain;
+    transform: translateX(-50%);
+}
+
+.product-card__image--cloud {
+    bottom: 92px;
+    width: 270px;
+    height: 270px;
+}
+
+.product-card__swatches {
+    position: absolute;
+    right: 20px;
+    bottom: 23px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    height: 24px;
+}
+
+.swatch {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #e1e1e1;
+    border-radius: 50%;
+}
+
+.swatch--black {
+    background-color: #20242a;
+    border-color: #20242a;
+}
+
+.swatch--cloud {
+    background-color: #dcd8d6;
+}
+
+.swatch--pink {
+    background-color: #e9b9df;
+}
+
+.swatch--sky {
+    background-color: #d6f2fb;
+}
+
+.swatch--yellow {
+    background-color: #e1f18a;
+}
+
+.swatch--navy {
+    background-color: #1d2f5a;
+}
+
+@media (max-width: 900px) {
+    .favorites {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .favorites__grid {
+        grid-template-columns: 1fr;
+        max-width: 420px;
+    }
+
+    .favorites h2 {
+        margin-bottom: 34px;
+    }
+}
